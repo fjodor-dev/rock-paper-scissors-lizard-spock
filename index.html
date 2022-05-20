@@ -49,8 +49,9 @@ $('document').ready(()=>{
       case 4: classForPCResult = "Lizard"; break
       case 5: classForPCResult = "Spock"; break
     }
-    resultPlayerCircle.addClass("Icon " + $(this).attr("class").split(' ').pop() + "")
-    resultPCCircle.addClass("Icon " + classForPCResult)
+
+    resultPlayerCircle.removeClass("Icon Siccors Paper Rock Lizard Spock").addClass("Icon " + $(this).attr("class").split(' ').pop() + "")
+    resultPCCircle.removeClass("Icon Siccors Paper Rock Lizard Spock").addClass("Icon " + classForPCResult)
  
     if (idIconPlayer == idIconPC) {
       console.log("player: " + idIconPlayer + ", PC: " + idIconPC + ", Tie")
